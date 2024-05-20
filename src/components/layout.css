@@ -1,6 +1,7 @@
 :root {
   --border-radius: 4px;
   --color-text: #333;
+  --color-text-light: #4b4a4a;
   --color-primary: #7026b9;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
@@ -21,7 +22,7 @@
   --space-4: 24px;
   --space-5: 32px;
   --space-6: 64px;
-  --size-content: 54rem;
+  --size-content: 1080px;
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
@@ -42,13 +43,14 @@ body {
   font-weight: normal;
   margin: 0;
   word-wrap: break-word;
+  background-color: #eef0f1;
 }
 a {
   background-color: transparent;
-  color: var(--color-primary);
+  color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 2px;
 }
