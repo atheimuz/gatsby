@@ -34,9 +34,10 @@ const links = [
   },
 ]
 
-const IndexPage = () => (
-  <Layout>
-    {/* <StaticImage
+const IndexPage = () => {
+  return (
+    <Layout>
+      {/* <StaticImage
         src="../images/example.png"
         loading="eager"
         width={64}
@@ -45,15 +46,16 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       /> */}
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <PostItem data={link} />
-        </li>
-      ))}
-    </ul>
-  </Layout>
-)
+      <ul className={styles.list}>
+        {links.map(link => (
+          <li key={link.url} className={styles.listItem}>
+            <PostItem data={link} />
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  )
+}
 
 /**
  * Head export to define metadata for the page
