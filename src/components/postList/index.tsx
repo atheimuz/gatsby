@@ -4,17 +4,7 @@ import * as styles from "./postList.module.scss"
 import PostItem, { PostItemType } from "components/postItem"
 
 export type PostType = {
-  node: {
-    id: string
-    frontmatter: {
-      title: string
-      description: string
-      date: string
-      categories: string[]
-      thumbnail: string
-    }
-    html: string
-  }
+  node: PostItemType
 }
 
 const PostList: FunctionComponent<{}> = function () {
@@ -25,6 +15,10 @@ const PostList: FunctionComponent<{}> = function () {
       allMarkdownRemark {
         edges {
           node {
+            id
+            fields {
+              slug
+            }
             frontmatter {
               title
               description
@@ -40,11 +34,13 @@ const PostList: FunctionComponent<{}> = function () {
   `)
 
   return (
-    <div className={styles.list}>
+    <ul className={styles.list}>
       {postList.map((item: PostType) => (
-        <PostItem data={item.node} />
+        <li key={item.node.id} className={styles.item}>
+          <PostItem data={item.node} />
+        </li>
       ))}
-    </div>
+    </ul>
   )
 }
 
