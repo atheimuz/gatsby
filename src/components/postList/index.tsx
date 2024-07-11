@@ -24,7 +24,11 @@ const PostList: FunctionComponent<{}> = function () {
               description
               date(formatString: "YYYY.MM.DD.")
               categories
-              thumbnail
+              thumbnail {
+                childImageSharp {
+                  gatsbyImageData(width: 768, height: 400)
+                }
+              }
             }
             html
           }
