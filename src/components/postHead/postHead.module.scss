@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 300px;
+    padding: 20px;
+    background-color: white;
+}
+
+.thumbnail {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.title {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 40px;
+    color: white;
+}

@@ -3,7 +3,7 @@ date: "2023-05-21"
 title: "Test"
 categories: ["카테고리1", "카테고리2"]
 description: "테스트1"
-thumbnail: "./test.png"
+thumbnail: "page01-thumbnail.JPG"
 ---
 
 ### 1번째

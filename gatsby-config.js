@@ -9,13 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `김명유의 포트폴리오`,
+    title: `블로그`,
     description: ``,
     author: `김명유`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,8 +25,6 @@ module.exports = {
         path: `${__dirname}/src/contents`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
