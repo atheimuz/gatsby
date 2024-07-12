@@ -1,0 +1,9 @@
+.wrapper {
+    padding: 20px;
+
+    & :global {
+        .utterances {
+            margin: 0;
+        }
+    }
+}

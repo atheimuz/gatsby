@@ -5,6 +5,7 @@ import Template from "components/template"
 import PostHead from "components/postHead"
 import PostContent from "components/postContent"
 import { PostItemType } from "components/postItem"
+import Utterances from "components/utterances"
 
 export type PostPageItemType = {
   node: PostItemType
@@ -45,6 +46,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
     <Template>
       <PostHead title={title} date={date} thumbnail={gatsbyImageData} />
       <PostContent html={html} />
+      <Utterances />
     </Template>
   )
 }
